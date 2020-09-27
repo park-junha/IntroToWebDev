@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <title>Intro to Web Development</title>
+    <link rel="stylesheet" href="styles.css"></link>
+    <script type="text/javascript" src="funny.js"></script>
+  </head>
+  <body>
+    <h1>Intro to Web Development</h1>
+    <div id="content">
+      <h2>Why develop websites / web applications?</h2>
+      <p>The Web is an accessible output of information with a lot of demand in the job market. Many software developers / engineers start out with web development to break into the tech industry!</p>
+      <h2>How do you develop websites?</h2>
+      <p>There are a lot of tools and technologies out there, but the <b>three fundamental components</b> of web development are <b>HTML</b>, <b>CSS</b>, and <b>JavaScript</b>.</p>
+      <ul>
+        <li><b>HTML</b> defines the <i>structure</i> and <i>content</i> of a website.</li>
+        <li><b>CSS</b> defines how a website should be <i>styled</i>.</li>
+        <li><b>JavaScript</b> makes a website <i>more interactive</i>.</li>
+      </ul>
+      <h2>Resources</h2>
+      <p>Some beginner-friendly tutorials to get started:</p>
+      <ul>
+        <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3Schools HTML Tutorial</a></li>
+        <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">W3Schools CSS Tutorial</a></li>
+        <li><a href="https://www.w3schools.com/js/default.asp" target="_blank">W3Schools JavaScript Tutorial</a></li>
+        <li><a href="https://www.youtube.com/watch?v=5YDVJaItmaY" target="_blank">Aaron Jack: Web Development in 10 Minutes</a> (first 3-4 minutes most important for beginners)</li>
+      </ul>
+      <h2>HTML</h2>
+      <p><b>Hypertext Markup Language</b> structures websites. You can use tags like &lt;div&gt;, &lt;p&gt;, &lt;h1&gt;, etc. to define the content of a website.</p>
+      <h3>Example</h3>
+      <p>The following HTML will write a paragraph with some bolded words:</p>
+      <code style="width: 300px">&lt;p&gt;I am &lt;b&gt;not&lt;/b&gt; the imposter!&lt;/p&gt;</code>
+      <p>I am <b>not</b> the imposter!</p>
+      <h2>CSS</h2>
+      <p><b>Cascading Style Sheets</b> styles websites.</p>
+      <h3>Example</h3>
+      <p>The following CSS will make the following h4 tag element red:</p>
+      <code style="width: 450px">&lt;h4 style&#61;&quot;color: #ff0000&quot;&gt;I am feeling red&lt;/h4&gt;</code>
+      <h4 style="color: #ff0000">I am feeling red</h4>
+      <p>You can also apply these styles in a separate CSS file to make all elements apply the same styles:</p>
+      <!-- This is a comment -->
+      <!-- The below markup is HORRIBLY STYLED, dont do this lol -->
+      <code style="width: 200px">h5 {
+  color: #ff0000;
+}</code>
+      <h5>I am also feeling red</h5>
+      <h5>As am I...</h5>
+      <p><strong>NOTE</strong>: To apply global styles in a separate CSS file, you must define the stylesheet in the &lt;head&gt; tag of your HTML document.</p>
+      <code style="width: 500px">&lt;head&gt;
+  &lt;link rel&#61;&quot;stylesheet&quot; href&#61;&quot;styles.css&quot;&gt;&lt;/link&gt;
+&lt;/head&gt;</code>
+      <h2>JavaScript</h2>
+      <p><b>JavaScript</b> can program interactive behavior in a website. You can use it to change HTML content, CSS, etc.</p>
+      <h3>Example</h3>
+      <p>The snippet below defines a function that changes the text of the HTML element with the id <u>funny-output</u>.</p>
+      <code style="width: 600px; margin-bottom: 16px">var funnyCount = 0;
+
+function getFunnyCountText() {
+  var postfix;
+  if (funnyCount === 1) {
+    postfix = " time.";
+  } else {
+    postfix = " times.";
+  }
+  return "You clicked the funny button " + funnyCount + postfix;
+}
+
+function funnyScript() {
+  funnyCount++;
+  document.getElementById("funny-output").innerHTML = getFunnyCountText();
+}</code>
+      <p>The following HTML defines a button that calls the JavaScript function <u>funnyScript()</u> when clicked.</p>
+      <code style="width: 600px; margin-bottom: 16px">&lt;button id=&quot;funny-button&quot; onclick=&quot;funnyScript()&quot;&gt;Click me&lt;/button&gt;
+&lt;div id=&quot;funny-output&quot;&gt;Nothing to see here&lt;/div&gt;</code>
+      <button id="funny-button" onclick="funnyScript()">Click me</button>
+      <div id="funny-output">Nothing to see here</div>
+      <p><strong>NOTE</strong>: To apply JavaScript from a separate JavaScript file, you must define it in the &lt;head&gt; tag of your HTML document.</p>
+      <code style="width: 500px">&lt;head&gt;
+  &lt;script type&#61;&quot;text/javascript&quot; src&#61;&quot;funny.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;</code>
+      <h2>Source Code</h2>
+      <p>You can find the source code for this website <a href="https://github.com/park-junha/IntroToWebDev" target="_blank">here</a>.</p>
+    </div>
+  </body>
+</html>
